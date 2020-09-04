@@ -1,0 +1,21 @@
+How to solve a system of equations for Va, Vb, Vc
+syms Va Vb Vc
+eqn1 = 600*Va - 500*Vb + 0*Vc + 12 == 0;
+eqn2 = -510*Va + 3500*Vb - 2200*Vc - 12 == 0;
+eqn3 = 0*Va - 2200*Vb + 12200*Vc == 0;
+sol = solve([eqn1, eqn2, eqn3], [Va, Vb, Vc]);
+VaSol = sol.Va; VbSol = sol.Vb; VcSol = sol.Vc;
+disp('Va = '), disp(VaSol);
+disp('Vb = '), disp(VbSol);
+disp('Vc = '), disp(VcSol);
+
+How to solve system of equations for R1, R2, and R3
+syms R1 R2 R3
+eqn1 = R1 + R2 + R3 == 3.09;
+eqn2 = R1*0 + R2 + R3 == 2.76;
+eqn3 = R1 + R2 + R3*0 == .89;
+sol = solve([eqn1, eqn2, eqn3], [R1, R2, R3]);
+R1Sol = sol.R1; R2Sol = sol.R2; R3Sol = sol.R3;
+disp('R1 = '), disp(R1Sol);
+disp('R2 = '), disp(R2Sol);
+disp('R3 = '), disp(R3Sol);
