@@ -1,3 +1,5 @@
+Once entered into MATLAB this coding will help solve the system of equations and find the values for the variables.
+
 How to solve a system of equations for Va, Vb, Vc
 syms Va Vb Vc
 eqn1 = 600*Va - 500*Vb + 0*Vc + 12 == 0;
