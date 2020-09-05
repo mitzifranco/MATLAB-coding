@@ -1,0 +1,47 @@
+This script file will allow us to perform operations (addition, subtraction, division, and multiplication) with complex numbers and convert them from rectangular form to polar form
+
+%% Exercise 1 : Complex number addition
+a = (3+4i); b = (4-2i);
+disp('----------------------- Beginning of Exercise 1 -------------------------');
+disp('Sum of a and b = '), disp(a+b); %Sum = (7+2i) rectangular form
+
+%% Complex number (7 + 2i) rectangular to polar conversion
+y = 7 + 2i;
+[phase_rad,mag]=cart2pol(real(y),imag(y));
+phase_deg = rad2deg(phase_rad);
+disp('Magnitude = '), disp(mag);  % Magnitude = 7.2801
+disp('Angle = '), disp(phase_deg); % Angle = 15.9454
+
+%% Complex number subtraction
+a = (3+4i); b = (4-2i);
+disp('Subtraction of a and b = '), disp(a-b); %Subtraction = (-1+6i) rectangular form
+
+%% Complex number (-2+ 6i) rectangular to polar conversion
+y = -1 + 6i;
+[phase_rad,mag]=cart2pol(real(y),imag(y));
+phase_deg = rad2deg(phase_rad);
+disp('Magnitude = '), disp(mag); %Magnitude = 6.0828
+disp('Angle = '), disp(phase_deg); %Angle = 99.4623
+
+%% Complex number multiplication
+a = (3+4i); b = (4-2i);
+disp('Multiplication of a and b = '), disp(a*b); %Multiplication = (20+10i) rectangular form
+
+%% Complex number (20 + 10i) rectangular to polar conversion
+y = 20 + 10i;
+[phase_rad,mag]=cart2pol(real(y),imag(y));
+phase_deg = rad2deg(phase_rad);
+disp('Magnitude = '), disp(mag); %Magnitude = 22.3607
+disp('Angle = '), disp(phase_deg); %Angle = 26.5651
+
+%% Complex number division
+a = (3+4i); b = (4-2i);
+disp('Division of a and b = '), disp(a/b); %Division=(.2+1.1i) rectangular form
+
+%% Complex number (.2 + 1.1i) rectangular to polar conversion
+y = .2 + 1.1i;
+[phase_rad,mag]=cart2pol(real(y),imag(y));
+phase_deg = rad2deg(phase_rad);
+disp('Magnitude = '), disp(mag); %Magnitude = 1.1180
+disp('Angle = '), disp(phase_deg); %Angle = 79.6952
+disp('----------------------- End of Exercise 1 -------------------------');
