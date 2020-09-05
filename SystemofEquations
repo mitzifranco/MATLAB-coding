@@ -1,5 +1,45 @@
 Once entered into MATLAB this coding will help solve the system of equations and find the values for the variables.
 
+To enter into the scriptfile:
+
+%% Exercise 1 : Solving the following system of equations for Va,Vb, and Vc
+% Use of solve function for linear systems of equations
+% Equation 1: 600Va - 500Vb + 0Vc + 12 = 0
+% Equation 1: -510Va + 3500Vb - 2200Vc - 12 = 0
+% Equation 1: 0Va - 2200Vb + 12200Vc = 0
+% Solution: Va = (-3176/163375)  Vb = (549/816875)  Vc = (99/816875)
+disp('----------------------- Beginning of Exercise 1 -------------------------');
+syms Va Vb Vc
+eqn1 = 600*Va - 500*Vb + 0*Vc + 12 == 0;
+eqn2 = -510*Va + 3500*Vb - 2200*Vc - 12 == 0;
+eqn3 = 0*Va - 2200*Vb + 12200*Vc == 0;
+sol = solve([eqn1, eqn2, eqn3], [Va, Vb, Vc]);
+VaSol = sol.Va; VbSol = sol.Vb; VcSol = sol.Vc;
+disp('Va = '), disp(VaSol);
+disp('Vb = '), disp(VbSol);
+disp('Vc = '), disp(VcSol);
+disp('----------------------- End of Exercise 1 -------------------------');
+
+%% Exercise 2 : Solving the following system of equations for R1, R2, and R3
+% Use of solve function for linear systems of equations
+% Equation 1: R1 + R2 + R3 = 3.09
+% Equation 1: R1*0 + R2 + R3 = 2.76
+% Equation 1: R1 + R2 + R3*0 = .89 
+% Solution: R1 = (33/100)  R2 = (14/25)  R3 = (11/5) NOTE: values are kOhms
+disp('----------------------- Beginning of Exercise 2 -------------------------');
+syms R1 R2 R3
+eqn1 = R1 + R2 + R3 == 3.09;
+eqn2 = R1*0 + R2 + R3 == 2.76;
+eqn3 = R1 + R2 + R3*0 == .89;
+sol = solve([eqn1, eqn2, eqn3], [R1, R2, R3]);
+R1Sol = sol.R1; R2Sol = sol.R2; R3Sol = sol.R3;
+disp('R1 (kOhms) = '), disp(R1Sol);
+disp('R2 (kOhms) = '), disp(R2Sol);
+disp('R3(kOhms) = '), disp(R3Sol); %% Note the following values are in KOhms
+disp('----------------------- End of Exercise 2 -------------------------');
+
+
+To enter straight into MATLAB:
 How to solve a system of equations for Va, Vb, Vc
 syms Va Vb Vc
 eqn1 = 600*Va - 500*Vb + 0*Vc + 12 == 0;
